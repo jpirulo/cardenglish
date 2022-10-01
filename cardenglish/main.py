@@ -25,7 +25,11 @@ def is_know():
     data.to_csv("data/words_to_learn.csv",index=False)
     next_card()
 def flip_card():
+<<<<<<< HEAD
     canvas.itemconfig(card_title, text="Espanol",fill="white")
+=======
+    canvas.itemconfig(card_title, text="Español",fill="white")
+>>>>>>> 8218648 (Cambio de palabra de Ingles a Espanol)
     canvas.itemconfig(card_word,text=english_word["Spanish"],fill="white")
     canvas.itemconfig(card_background,image=back_img)
 
