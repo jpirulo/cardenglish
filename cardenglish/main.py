@@ -1,7 +1,5 @@
 from tkinter import *
 from tkinter import messagebox
-import pyperclip
-import json
 import pandas
 import random
 english_word = {}
@@ -11,10 +9,8 @@ try:
 except:
     original_data = pandas.read_csv("data/english.csv")
     to_learn = original_data.to_dict(orient="records")
-
 else:
     to_learn = data.to_dict(orient="records")
-
 def next_card():
     global english_word,flip_timer
     window.after_cancel(flip_timer)
@@ -28,10 +24,6 @@ def is_know():
     data=pandas.DataFrame(to_learn)
     data.to_csv("data/words_to_learn.csv",index=False)
     next_card()
-
-
-
-
 def flip_card():
     canvas.itemconfig(card_title, text="Spanish",fill="white")
     canvas.itemconfig(card_word,text=english_word["Spanish"],fill="white")
