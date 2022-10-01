@@ -25,7 +25,7 @@ def is_know():
     data.to_csv("data/words_to_learn.csv",index=False)
     next_card()
 def flip_card():
-    canvas.itemconfig(card_title, text="Español",fill="white")
+    canvas.itemconfig(card_title, text="Espanol",fill="white")
     canvas.itemconfig(card_word,text=english_word["Spanish"],fill="white")
     canvas.itemconfig(card_background,image=back_img)
 
