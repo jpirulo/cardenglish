@@ -2,7 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 import pandas
 import random
-english_word = {}
+english_word = {
 to_learn = {}
 try:
     data=pandas.read_csv("data/words_to_learn.csv")
@@ -25,7 +25,7 @@ def is_know():
     data.to_csv("data/words_to_learn.csv",index=False)
     next_card()
 def flip_card():
-    canvas.itemconfig(card_title, text="Spanish",fill="white")
+    canvas.itemconfig(card_title, text="Español",fill="white")
     canvas.itemconfig(card_word,text=english_word["Spanish"],fill="white")
     canvas.itemconfig(card_background,image=back_img)
 
